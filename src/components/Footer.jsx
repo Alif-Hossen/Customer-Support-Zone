@@ -43,9 +43,6 @@ const Footer = () => {
                 <small>© 2025 CS — Ticket System. All rights reserved.</small>
             </div>
         </>
-        
-
-        
     );
 };
 
