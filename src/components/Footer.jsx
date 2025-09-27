@@ -1,3 +1,5 @@
+// MAIN -->
+
 import React from 'react';
 import Twiter from './Images/Vector.png'
 
@@ -8,7 +10,7 @@ const Footer = () => {
 
                 <div className=' '>
                     <h4 className='text-2xl font-bold'>CS — Ticket System</h4>
-                    <p className='pt-6 text-gray-400'>To Be Honest - Last Time I Was Not Attentive In My  Course. And i Don't Even Complete My Last 2 Module  Even The Project. Though I Had Completed Till Video-4  After All Now I Am here To Do Assignment Seven. I Just  Want to Complete My Assignment WithOut Using AI Power Tolls. Here Point To Be Noted That I Don't use  Any Kind Of AI Tools. I Had Submitted Last Six Assignment With My Own.. Like Previous I Am Here  Again To Complete My Assignment.</p>
+                    <p className='pt-6 text-gray-400'>To Be Honest - Last Time I Was Not Attentive In My  Course. And i Don't Even Complete My Last 2 Module  Even The Project. Though I Had Completed Till Video-4  After All Now I Am here To Do Assignment Seven. I Just  Want to Complete My Assignment WithOut Using AI Power Tolls. </p>
                 </div>
                 <div className='pt-8 md:pt-0 md:pl-20'>
                     <h4 className='text-2xl font-bold'>Company</h4>
