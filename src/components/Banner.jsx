@@ -9,7 +9,7 @@ function Banner({ inProgress, resolved }) {
       
       <div className="relative rounded-xl h-[200px] md:h-[252px] flex-1 bg-gradient-to-r from-[#6731E4] to-[#9C5FF1] p-4 flex items-center justify-center overflow-hidden">
         <div className="flex justify-between absolute ">
-          <img className="w-[150px] md:w-[300px]" src={Vector} alt="" />
+          <img className="w-[150px] md:w-[320px]" src={Vector} alt="" />
           <img className="w-[150px] md:w-[300px] transform scale-x-[-1]" src={Vector} alt="" />
         </div>
         <div className="relative text-white text-center">
@@ -21,7 +21,7 @@ function Banner({ inProgress, resolved }) {
     
       <div className="relative rounded-xl h-[200px] md:h-[252px] flex-1 bg-gradient-to-r from-[#52CE68] to-[#068879] p-4 flex items-center justify-center overflow-hidden">
         <div className="flex justify-between absolute ">
-          <img className="w-[150px] md:w-[300px]" src={Vector} alt="" />
+          <img className="w-[150px] md:w-[320px]" src={Vector} alt="" />
           <img className="w-[150px] md:w-[300px] transform scale-x-[-1]" src={Vector} alt="" />
         </div>
         <div className="relative text-white text-center">

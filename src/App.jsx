@@ -1,3 +1,4 @@
+// MAIN 
 
 
 import React, { useState, useEffect } from 'react';
@@ -12,6 +13,7 @@ function App() {
   const [inProgressCount, setInProgressCount] = useState(0);
   const [resolvedCount, setResolvedCount] = useState(0);
   const [inProgressTasks, setInProgressTasks] = useState([]);
+  const [resolvedTasks, setResolvedTasks] = useState([]); 
 
   useEffect(() => {
     fetch('/customers.json')
@@ -30,19 +32,29 @@ function App() {
   }, []);
 
   const handleTicketClick = (customer) => {
-    alert(`You Are Starting - "${customer.title}"`);
+    alert(`You Are Starting "${customer.title}"`);
     
     setInProgressCount(prev => prev + 1);
     
-    const newTask = { ...customer, uniqueId: Date.now() + Math.random() };
+    const newTask = { ...customer, uniqueId: Date.now() + Math.random(), originalId: customer.id };
     setInProgressTasks(prevTasks => [...prevTasks, newTask]);
   };
 
   const handleCompleteTask = (uniqueId) => {
-    setResolvedCount(prev => prev + 1);
-    setInProgressCount(prev => Math.max(0, prev - 1));
+
+    const completedTask = inProgressTasks.find(task => task.uniqueId === uniqueId);
     
-    setInProgressTasks(prevTasks => prevTasks.filter(task => task.uniqueId !== uniqueId));
+    if (completedTask) {
+
+      setResolvedCount(prev => prev + 1);
+      setInProgressCount(prev => Math.max(0, prev - 1));
+      
+      setResolvedTasks(prevResolved => [...prevResolved, completedTask]);
+      
+      setInProgressTasks(prevTasks => prevTasks.filter(task => task.uniqueId !== uniqueId));
+
+      setCustomers(prevCustomers => prevCustomers.filter(customer => customer.id !== completedTask.originalId));
+    }
   };
 
   return (
@@ -67,6 +79,7 @@ function App() {
         <div className="lg:col-span-1">
           <TaskStatus 
             inProgressTasks={inProgressTasks} 
+            resolvedTasks={resolvedTasks} 
             onComplete={handleCompleteTask} 
           />
         </div>
@@ -78,6 +91,16 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
 
 
 

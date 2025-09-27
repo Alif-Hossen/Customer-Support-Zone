@@ -5,7 +5,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div class=" md:flex  justify-between max-w-[1320px] mx-auto pt-10">
+    <div class=" md:flex  justify-between max-w-[1310px] mx-auto pt-10">
       
       <div class=" ">
         <h4 className='text-3xl font-bold text-center text-black'>CS--Ticket System</h4>

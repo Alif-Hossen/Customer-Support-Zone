@@ -1,3 +1,4 @@
+// MAIN 
 
 
 import React from 'react';
@@ -63,15 +64,6 @@ function Customer({ customerData, onTicketClick }) {
 }
 
 export default Customer;
-
-
-
-
-
-
-
-
-
 
 
 
